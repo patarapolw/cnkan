@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import About from "./components/About.vue";
+import Analyze from "./components/Analyze.vue";
 import Dashboard from "./components/Dashboard.vue";
 import Search from "./components/Search.vue";
 
@@ -10,6 +11,7 @@ const router = createRouter({
     { path: "/", component: Dashboard },
     { path: "/search", component: Search },
     { path: "/dashboard", component: Dashboard },
+    { path: "/analyze", component: Analyze },
     { path: "/about", component: About },
   ],
 });

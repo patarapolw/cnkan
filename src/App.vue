@@ -35,6 +35,7 @@
           <v-list-item
             prepend-icon="mdi-text-recognition"
             title="Text"
+            to="/analyze"
           ></v-list-item>
           <v-list-item
             prepend-icon="mdi-information-outline"
@@ -43,8 +44,12 @@
           ></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-container>
+      <v-container
+        tag="main"
+        style="position: relative; width: 100%; height: 100%"
+      >
         <RouterView />
+        <Modal default-tab-name="hello" />
       </v-container>
     </v-layout>
   </v-app>
@@ -52,6 +57,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import Modal from "./components/Modal.vue";
 
 const level = ref(3);
 </script>
