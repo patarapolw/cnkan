@@ -12,10 +12,13 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { newTab } from "../states/tabbed-modal";
 
 const q = ref("");
 
-function analyze() {}
+function analyze() {
+  newTab(q.value);
+}
 </script>
 
 <style scoped>

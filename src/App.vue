@@ -54,7 +54,7 @@
         <v-container>
           <RouterView />
         </v-container>
-        <Modal default-tab-name="hello" />
+        <Modal />
       </main>
     </v-layout>
   </v-app>
