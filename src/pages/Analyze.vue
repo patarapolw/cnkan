@@ -20,6 +20,16 @@ const q = ref("");
 async function analyze() {
   if (!q) return;
   analyzeItems.value = await invoke("segment", { text: q.value });
+
+  // Array.from({
+  //   length: Math.max(...analyzeItems.value.map((it) => it.r.length)),
+  // }).map((_, i) => {
+  //   console.log(
+  //     i,
+  //     [...new Set(analyzeItems.value.map((it) => it.r[i]))].sort().join(",")
+  //   );
+  // });
+
   newTab({ is: "AnalyzeResult", title: "Result", q: q.value });
 }
 </script>

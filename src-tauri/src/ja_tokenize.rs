@@ -5,7 +5,7 @@ use lindera::tokenizer::Tokenizer;
 
 #[derive(serde::Serialize)]
 pub struct SegmentResult {
-    v: String,
+    t: String,
     r: Vec<String>
 }
 
@@ -36,7 +36,7 @@ impl LinderaAnalyzer {
             let details = token.clone().details().iter().map(|f| f.to_string()).collect::<Vec<String>>();
 
             result_tokens.push(SegmentResult {
-                v: text,
+                t: text,
                 r: details,
             });
         }

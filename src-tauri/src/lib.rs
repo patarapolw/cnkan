@@ -1,8 +1,8 @@
 use tauri::Manager;
 
-use crate::tokenize::{LinderaAnalyzer, SegmentResult};
+use crate::ja_tokenize::{LinderaAnalyzer, SegmentResult};
 
-pub mod tokenize;
+pub mod ja_tokenize;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
