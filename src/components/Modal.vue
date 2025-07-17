@@ -7,11 +7,13 @@
     scrollable
   >
     <v-card>
-      <v-tabs v-model="iTab">
-        <v-tab v-for="(t, i) in modalTabs" :key="i" :value="i">
-          {{ t.title }}
-        </v-tab>
-      </v-tabs>
+      <v-card-title>
+        <v-tabs v-model="iTab">
+          <v-tab v-for="(t, i) in modalTabs" :key="i" :value="i">
+            {{ t.title }}
+          </v-tab>
+        </v-tabs>
+      </v-card-title>
 
       <v-card-text>
         <v-tabs-window v-model="iTab">
