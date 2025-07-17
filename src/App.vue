@@ -50,7 +50,7 @@
           ></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <main style="position: relative; width: 100%; height: 100%">
+      <main class="main">
         <v-container>
           <RouterView />
         </v-container>
@@ -66,3 +66,24 @@ import Modal from "./components/Modal.vue";
 
 const level = ref(3);
 </script>
+
+<style lang="scss" scoped>
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<style lang="scss">
+/* Hide the scrollbar for Internet Explorer, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide the scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+</style>

@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "tauri-dev": "tauri dev",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "t:dev": "tauri dev",
     "tauri": "tauri"
   },
   "dependencies": {
