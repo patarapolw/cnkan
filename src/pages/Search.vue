@@ -24,11 +24,17 @@ function doSearch() {}
 
 onMounted(() => {
   clipboardPoll.value = setInterval(async () => {
-    const newText = await readText();
-    if (clipboardCurrentText.value === undefined) {
-      clipboardCurrentText.value = newText;
-      return;
-    } else if (clipboardCurrentText.value === newText) {
+    const newText = await readText().catch((e) => {
+      console.error(e);
+      return "";
+    });
+    if (!newText) return;
+
+    // if (clipboardCurrentText.value === undefined) {
+    //   clipboardCurrentText.value = newText;
+    //   return;
+    // }
+    if (clipboardCurrentText.value === newText) {
       return;
     }
 
