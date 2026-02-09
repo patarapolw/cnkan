@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev:desktop": "tauri dev",
+    "dev:mobile": "tauri dev -c src-tauri/tauri.mobile.conf.json",
     "dev:android": "tauri android dev",
     "build:desktop": "tauri build",
     "build:android": "tauri android build --debug",

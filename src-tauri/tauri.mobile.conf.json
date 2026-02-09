@@ -1,0 +1,13 @@
+{
+  "identifier": "cc.polv.cnkan",
+  "app": {
+    "windows": [
+      {
+        "title": "cnkan",
+        "width": 450,
+        "height": 800,
+        "maximized": false
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-layout>
-      <v-app-bar v-if="isMobile">
+      <v-app-bar color="secondary" v-if="isMobile">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </v-app-bar>
 
@@ -10,8 +10,7 @@
         :expand-on-hover="!isMobile"
         :rail="!isMobile"
         color="blue-grey-lighten-5"
-        :mobile="false"
-        style="z-index: 10000"
+        :temporary="$vuetify.display.mobile"
       >
         <v-list>
           <v-list-item title="Home" to="/">
@@ -38,7 +37,12 @@
           ></v-list-item>
           <v-list-item title="Levels" @click="level = level ? 0 : 3">
             <template v-slot:prepend>
-              <v-avatar color="surface-light">
+              <!-- Total width 40px  -->
+              <v-avatar
+                color="surface-light"
+                size="24"
+                style="margin-right: 16px"
+              >
                 <span class="text">{{ level }}</span>
               </v-avatar>
             </template>
@@ -48,6 +52,7 @@
             title="Text"
             to="/analyze"
           ></v-list-item>
+          <v-list-item prepend-icon="mdi-cog" title="Settings"></v-list-item>
           <v-list-item
             prepend-icon="mdi-information-outline"
             title="About"
@@ -66,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useDisplay } from "vuetify";
 import Modal from "./components/Modal.vue";
 
@@ -74,6 +79,10 @@ const { mobile: isMobile } = useDisplay();
 
 const level = ref(3);
 const drawer = ref(!isMobile.value);
+
+watch(isMobile, () => {
+  drawer.value = !isMobile.value;
+});
 </script>
 
 <style lang="scss" scoped>
