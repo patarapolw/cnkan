@@ -1,9 +1,9 @@
 {
-  "identifier": "cc.polv.cnkan",
+  "identifier": "cc.polv.cjdic",
   "app": {
     "windows": [
       {
-        "title": "cnkan",
+        "title": "cjdic",
         "width": 450,
         "height": 800,
         "maximized": false

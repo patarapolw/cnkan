@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "cnkan",
+  "productName": "cjdic",
   "version": "0.1.0",
-  "identifier": "cc.polv.cnkan",
+  "identifier": "cc.polv.cjdic",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "cnkan",
+        "title": "cjdic",
         "width": 1024,
         "height": 768,
         "maximized": true
